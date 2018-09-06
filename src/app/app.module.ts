@@ -8,10 +8,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 // Import FusionCharts library and chart modules
 import FusionCharts from 'fusioncharts/core';
 import Column2d from 'fusioncharts/viz/column2d';
+import mscolumn2d from 'fusioncharts/viz/mscolumn2d';
 import FusionTheme from 'fusioncharts/themes/es/fusioncharts.theme.fusion';
 import PowerCharts from 'fusioncharts/powercharts';
 // Pass the fusioncharts library and chart modules
-FusionChartsModule.fcRoot(FusionCharts, Column2d, FusionTheme,PowerCharts);
+FusionChartsModule.fcRoot(FusionCharts, Column2d, FusionTheme,PowerCharts,mscolumn2d);
 
 @NgModule({
   declarations: [

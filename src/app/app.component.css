@@ -2,10 +2,62 @@
     margin-top: 20px;
 }
 
-.mar-l-10{
-    margin-left: 10px;
-}
 
 .mar-top-10{
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 0px;
 }
+
+h1{
+    
+    background-color: rgb(75, 77, 99); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+}
+
+
+.green{
+    background-color:  rgb(0, 255, 0);
+    padding:4px;
+    width: 29px;
+    height: 34px;
+    border: -5px solid;
+    color:white;
+}
+
+.red{
+    background-color:  rgb(255, 0, 0);
+    padding:6px;
+    width: 29px;
+    height: 34px;
+    color:white;
+
+}
+.col-sm-6
+{
+       padding-right: 300px;
+}
+
+.black{
+    background-color:  rgb(0, 0, 0);
+    padding:6px;
+    width: 29px;
+    height: 34px; 
+    color:white;  
+}
+ div:empty{
+     display:none;
+ }
+ .container{
+
+    
+    /* margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 20px; */
+ }

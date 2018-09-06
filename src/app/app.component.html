@@ -1,166 +1,141 @@
 <div class="container">
-<div class="row mar-top-10">
-  <div class="col-sm-3">
-      <input type="text" class="form-control" [(ngModel)]="id"/>
+    <div class="row">
+        <div class="column">
+  <div>
+    <div *ngIf="table1">
+      <h1>COMPONENT 1</h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of table1">
+          <tr>
+            <td><div class="green">{{item.one}}</div></td>
+            <td><div class="red">{{item.two}}</div></td>
+            <td><div class="black">{{item.three}}</div></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div  *ngIf="table2">
+      <h1>COMPONENT 2</h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of table2">
+            <tr>
+              <td><div class="green">{{item.one}}</div></td>
+              <td><div class="red">{{item.two}}</div></td>
+              <td><div class="black">{{item.three}}</div></td>
+            </tr>
+            
+          </tbody>
+      </table>
+    </div>
   </div>
-<div class="col-sm-3">
-  <button type="button" class="btn btn-default" (click)="deleteTable()">Submit</button>
-</div>
-</div>
-  <div class="row mar-top-10">
-<div class="col-sm-6" *ngIf="table1">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="col-sm-6" *ngIf="table2">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>jatin</td>
-        <td>khurana</td>
-        <td>jatin@example.com</td>
-      </tr>
-      <tr>
-        <td>venkat</td>
-        <td>khurana</td>
-        <td>venkat@example.com</td>
-      </tr>
-      <tr>
-        <td>kamesh</td>
-        <td>sharma</td>
-        <td>kamesh@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
 
-
-<div class="row mar-top-10">
-<div class="col-sm-6" *ngIf="table3">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Megha</td>
-        <td>Doe</td>
-        <td>megha@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>jackson</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>brad</td>
-        <td>sharma</td>
-        <td>brad@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="col-sm-6" *ngIf="table4">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>william</td>
-        <td>johns</td>
-        <td>william@example.com</td>
-      </tr>
-      <tr>
-        <td>Parveen</td>
-        <td>Mor</td>
-        <td>parveen@example.com</td>
-      </tr>
-      <tr>
-        <td>allison</td>
-        <td>Dooley</td>
-        <td>allison@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-</div>
-
-
-
-<div class="row">
-
-  <div class="col-sm-6" *ngIf="table5">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Akash</td>
-          <td>aggarwal</td>
-          <td>akash@example.com</td>
-        </tr>
-        <tr>
-          <td>sneha</td>
-          <td>khurana</td>
-          <td>sneha@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="col-sm-6">
+  <div>
+      <div *ngIf="table3">
+          <h1>COMPONENT 3</h1>
+          <table class="table table-hover">
+            <thead>
+              <tr>
     
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of table3">
+                <tr>
+                  <td><div class="green">{{item.one}}</div></td>
+                  <td><div class="red">{{item.two}}</div></td>
+                  <td><div class="black">{{item.three}}</div></td>
+                </tr>
+                
+              </tbody>
+          </table>
+        </div>
+        <div *ngIf="table4">
+            <h1>COMPONENT 4</h1>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+      
+                </tr>
+              </thead>
+              <tbody *ngFor="let item of table4">
+                  <tr>
+                    <td><div class="green">{{item.one}}</div></td>
+                    <td><div class="red">{{item.two}}</div></td>
+                    <td><div class="black">{{item.three}}</div></td>
+                  </tr>
+                  
+                </tbody>
+            </table>
+          </div>
+    </div>
+
   </div>
+  <div class="column"><fusioncharts width="700" height="700" type="mscolumn2d" [dataFormat]="dataFormat" [dataSource]="dataSource">
+    </fusioncharts></div>
 </div>
+
+  
+  
+
+   
+
+
+
+
+  <!-- <div class="row">
+
+    <div *ngIf="table5">
+      <h1>COMPONENT 5</h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+
+          </tr>
+        </thead>
+        <tbody *ngFor="let item of table5">
+            <tr>
+              <td><div class="green">{{item.one}}</div></td>
+              <td><div class="red">{{item.two}}</div></td>
+              <td><div class="black">{{item.three}}</div></td>
+            </tr>
+            
+          </tbody>
+      </table>
+    </div>
+    <div>
+
+    </div>
+  </div> -->
+  
+  <div >
+      <div>
+        <input type="text" class="form-control" [(ngModel)]="id" />
+      </div>
+      DELETE
+      <div>
+        <button type="button" class="btn btn-default" (click)="deleteTable()">Submit</button>
+      </div>
+    </div>
+
+  <div class="row">
+    <div>
+      <div class="form-group">
+        <input type="text" value="correct value" [(ngModel)]="itemValue" name="itemValue" class="form-control is-valid" id="inputValid">
+      </div>
+    </div>
+    ID CHECK
+    <div>
+      <button type="button" class="btn" (click)="submitId(item);">Submit!</button>
+    </div>
+  </div>
 </div>
