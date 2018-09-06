@@ -1,8 +1,8 @@
 <div class="container">
-    <div class="row">
-        <div class="column">
-  <div>
-    <div *ngIf="table1">
+  
+  
+  <div class="row">
+    <div class="col-sm-3" *ngIf="table1">
       <h1>COMPONENT 1</h1>
       <table class="table table-hover">
         <thead>
@@ -20,7 +20,7 @@
         </tbody>
       </table>
     </div>
-    <div  *ngIf="table2">
+    <div  class="col-sm-3" *ngIf="table2">
       <h1>COMPONENT 2</h1>
       <table class="table table-hover">
         <thead>
@@ -40,8 +40,8 @@
     </div>
   </div>
 
-  <div>
-      <div *ngIf="table3">
+  <div class="row">
+      <div class="col-sm-3" *ngIf="table3">
           <h1>COMPONENT 3</h1>
           <table class="table table-hover">
             <thead>
@@ -59,7 +59,7 @@
               </tbody>
           </table>
         </div>
-        <div *ngIf="table4">
+        <div class="col-sm-3" *ngIf="table4">
             <h1>COMPONENT 4</h1>
             <table class="table table-hover">
               <thead>
@@ -79,13 +79,9 @@
           </div>
     </div>
 
-  </div>
-  <div class="column"><fusioncharts width="700" height="700" type="mscolumn2d" [dataFormat]="dataFormat" [dataSource]="dataSource">
-    </fusioncharts></div>
-</div>
-
   
-  
+  <fusioncharts width="700" height="700" type="mscolumn2d" [dataFormat]="dataFormat" [dataSource]="dataSource">
+    </fusioncharts>
 
    
 
@@ -94,7 +90,7 @@
 
   <!-- <div class="row">
 
-    <div *ngIf="table5">
+    <div class="col-sm-3" *ngIf="table5">
       <h1>COMPONENT 5</h1>
       <table class="table table-hover">
         <thead>
@@ -112,29 +108,29 @@
           </tbody>
       </table>
     </div>
-    <div>
+    <div class="col-sm-3">
 
     </div>
   </div> -->
   
-  <div >
-      <div>
+  <div class="row mar-top-10">
+      <div class="col-sm-3">
         <input type="text" class="form-control" [(ngModel)]="id" />
       </div>
       DELETE
-      <div>
+      <div class="col-sm-3">
         <button type="button" class="btn btn-default" (click)="deleteTable()">Submit</button>
       </div>
     </div>
 
   <div class="row">
-    <div>
+    <div class="col-sm-3">
       <div class="form-group">
         <input type="text" value="correct value" [(ngModel)]="itemValue" name="itemValue" class="form-control is-valid" id="inputValid">
       </div>
     </div>
     ID CHECK
-    <div>
+    <div class="col-sm-3">
       <button type="button" class="btn" (click)="submitId(item);">Submit!</button>
     </div>
   </div>
