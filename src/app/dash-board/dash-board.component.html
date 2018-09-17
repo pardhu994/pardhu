@@ -1,0 +1,57 @@
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta content="width-device-width, intial-scale=1" name="viewport">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3/3/7/css/bootstrap.min.css"> -->
+
+<body>
+  <div class="topHeading">
+    Data Center 1
+  </div>
+  <div class="heading2">
+    service
+  </div>
+  <div class="row">
+    <!-- <div class="row col-md-12 col-lg-12 col-sm-12 col-xs-12 flex"> -->
+    <!-- <div id="container">
+  <div id="main" > -->
+    <div class="table-responsive" style="width:142px" *ngFor="let records of jsonMainData">
+      <table class="table">
+        <thead>
+          <tr>
+            <th colspan='5' (click)="redirectTo(records.appName)">{{records.appName}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let component of records.component">
+
+            <td *ngFor="let prob of component.probes">
+              <div [ngClass]="(prob.status == 0)? 'black' : 'green'">{{prob.count}}</div>
+            </td>
+            <td>
+              <div class="grey">01</div>
+            </td>
+            <td>
+                <div class="grey">01</div>
+              </td>
+              <td>
+                  <div class="grey">01</div>
+                </td>
+             <!-- <td>
+            <div class="red"></div>
+          </td> -->
+          <!--<td>
+              <div class="purple">2</div>
+            </td>
+            <td>
+                <div class="yellow">3</div>
+              </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- </div>
+</div> 
+     </div> -->
+
+  </div>
+</body>

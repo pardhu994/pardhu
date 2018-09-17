@@ -5,24 +5,41 @@ import { AppComponent } from './app.component';
 import { FusionChartsModule } from 'angular-fusioncharts';
 import { NgForm } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-// Import FusionCharts library and chart modules
+import { HttpClientModule } from '@angular/common/http';
 import FusionCharts from 'fusioncharts/core';
-import Column2d from 'fusioncharts/viz/column2d';
-import mscolumn2d from 'fusioncharts/viz/mscolumn2d';
+import column3d from 'fusioncharts/viz/column3d';
+import pie3d from 'fusioncharts/viz/pie3d';
+import Column2d from 'fusioncharts/viz/Column2d';
 import FusionTheme from 'fusioncharts/themes/es/fusioncharts.theme.fusion';
-import PowerCharts from 'fusioncharts/powercharts';
-// Pass the fusioncharts library and chart modules
-FusionChartsModule.fcRoot(FusionCharts, Column2d, FusionTheme,PowerCharts,mscolumn2d);
+FusionChartsModule.fcRoot(FusionCharts, column3d, pie3d, Column2d,FusionTheme);
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import 'hammerjs';
+import {RouterModule,Routes} from '@angular/router';
+import { DashBoardComponent } from './dash-board/dash-board.component';
+import { ApplicationComponent } from './application/application.component';
+
+const appRoutes:Routes=[
+  {path:'dashboard',component:DashBoardComponent},
+  {path:'application/:name',component:ApplicationComponent},
+  {path:'',redirectTo:'/dashboard',pathMatch:'full'}
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+  DashBoardComponent,
+  ApplicationComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    MatTooltipModule,
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
-    FusionChartsModule
+    FusionChartsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes,{useHash:true})
   ],
   providers: [],
   bootstrap: [AppComponent]
